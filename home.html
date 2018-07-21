@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/model/furniture.js"></script>
+    <script src="js/controller/home-controller.js"></script>
+    <script>
+        let controller = new HomeController();
+    </script>
+    <title>Housefy</title>
+</head>
+
+<body onload="controller.listAllFurnitures()">
+    
+    <nav class="nav-bar">
+        <img class="menu" src="img/menu.svg">
+        <h1>Móveis</h1>
+        <img class="search" src="img/search.svg">
+    </nav>
+    
+    <div class="nav-spacer"></div>
+
+    <div id="loading" class="w-10 my-50 center">
+        <img class="w-100" src="img/loading.svg" alt="Loading image">
+    </div>
+
+    <div id="not-found" class="hide text-center text-gray">
+        <span class="text-gray">Nenhum móvel encontrado</span>
+    </div>
+    
+    <section class="furnitures w-80 center"></section>
+    
+    <div class="text-center">
+        <a href="new-forniture.html">
+            <button class="btn my-30 w-80">Adicionar</button>
+        </a>
+    </div>
+    
+</body>
+
+</html>

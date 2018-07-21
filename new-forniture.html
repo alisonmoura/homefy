@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/model/furniture.js"></script>
+    <script src="js/controller/furniture-register-controller.js"></script>
+    <script>
+        let controller = new FurnitureRegisterController();
+    </script>
+    <title>Housefy</title>
+</head>
+
+<body>
+    
+    <nav class="nav-bar">
+        <img class="menu" src="img/back.svg" onclick="javascript: return history.go(-1)">
+        <h1>Novo Móvel</h1>
+        <img class="search" src="img/search.svg">
+    </nav>
+    
+    <div class="nav-spacer"></div>
+    
+    <form class="form w-80 center">
+
+        <img src="img/chair.svg" class="w-30 mb-30 img-center" alt="Chair icon">
+        
+        <input id="image" type="text" placeholder="Imagem">
+        
+        <select id="type">
+            <option value="Selecione" value="" selected>Tipo do móvel</option>
+            <option value="Sofá">Sofá</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Cadeira">Cadeira</option>
+            <option value="Churrasqueira">Churrasqueira</option>
+        </select>
+        
+        <select id="color">
+            <option value="Selecione" value="" selected>Cor do móvel</option>
+            <option value="Branco">Branco</option>
+            <option value="Preto">Preto</option>
+            <option value="Vermelho">Vermelho</option>
+            <option value="Azul">Azul</option>
+            <option value="Verde">Verde</option>
+            <option value="Amarelo">Amarelo</option>
+            <option value="Laranja">Laranja</option>
+            <option value="Roxo">Roxo</option>
+            <option value="Cinza">Cinza</option>
+            <option value="Marron">Marron</option>
+        </select>
+
+        <input id="price" type="number" placeholder="Preço">
+
+        <button type="button" onclick="controller.save()" class="btn btn-block">Salvar</button>
+        
+    </form>
+    
+</body>
+
+</html>
